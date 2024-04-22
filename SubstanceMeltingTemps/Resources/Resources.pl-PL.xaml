@@ -1,0 +1,37 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="_File">_Plik</system:String>
+    <system:String x:Key="_Settings">_Ustawienia</system:String>
+    <system:String x:Key="_Open">_Otwórz</system:String>
+    <system:String x:Key="_Save">_Zapisz</system:String>
+    <system:String x:Key="_Exit">_Wyjście</system:String>
+    <system:String x:Key="_Scale">_Skala</system:String>
+    <system:String x:Key="_Celcius">_Celcjusz</system:String>
+    <system:String x:Key="_Fahrenheit">_Fahrenheit</system:String>
+    <system:String x:Key="_Language">_Język</system:String>
+    <system:String x:Key="_English">_English</system:String>
+    <system:String x:Key="_Polish">_Polski</system:String>
+    <system:String x:Key="Add instrument">Dodaj instrument</system:String>
+    <system:String x:Key="Id">Id</system:String>
+    <system:String x:Key="Add">Dodaj</system:String>
+    <system:String x:Key="Instrument">Instrument</system:String>
+    <system:String x:Key="Add substance">Dodaj substancję</system:String>
+    <system:String x:Key="Name">Nazwa</system:String>
+    <system:String x:Key="Nominal temperature">Temperatura nominalna</system:String>
+    <system:String x:Key="Measured temperature">Temperatura zmierzona</system:String>
+    <system:String x:Key="Nominal temperature [°C]">Temperatura nominalna [°C]</system:String>
+    <system:String x:Key="Measured temperature [°C]">Temperatura zmierzona [°C]</system:String>
+    <system:String x:Key="Nominal temperature [K]">Temperatura nominalna [K]</system:String>
+    <system:String x:Key="Measured temperature [K]">Temperatura zmierzona [K]</system:String>
+    <system:String x:Key="Substance list">Lista substancji</system:String>
+    <system:String x:Key="Fit">Dopasuj</system:String>
+    <system:String x:Key="Correlation coefficient">Współczynnik korelacji</system:String>
+    <system:String x:Key="Alpha">Alfa</system:String>
+    <system:String x:Key="Beta">Beta</system:String>
+    <system:String x:Key="Edit">Edytuj</system:String>
+    <system:String x:Key="Save">Zapisz</system:String>
+    <system:String x:Key="Delete">Usuń</system:String>
+</ResourceDictionary>
