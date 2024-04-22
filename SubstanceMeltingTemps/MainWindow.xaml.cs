@@ -154,6 +154,11 @@ namespace SubstanceMeltingTemps
 
         private void AddSubstanceButton_Click(object sender, RoutedEventArgs e)
         {
+            if (SelectedInstrument == null)
+            {
+                MessageBox.Show("Can't add substance without selected instrument.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
             var name = NamesComboBox.Text;
             float nominalMeltingTemperature;
             float measuredMeltingTemperature;
