@@ -48,8 +48,10 @@ namespace SubstanceMeltingTemps
         private LinearAxis nominalAxis;
         private LinearAxis measuredAxis;
 
-        private static readonly Regex numericOnly = new Regex("[^0-9.-]+");
-        private static readonly Regex naturalNumbersOnly = new Regex("^[1-9][0-9]*$");
+        [GeneratedRegex("[^0-9.-]+")]
+        private static partial Regex NumericOnly();
+        [GeneratedRegex("^[1-9][0-9]*$")]
+        private static partial Regex NaturalNumbersOnly();
 
         public MainWindow()
         {;
@@ -160,11 +162,7 @@ namespace SubstanceMeltingTemps
                 return;
             }
             var name = NamesComboBox.Text;
-            float nominalMeltingTemperature;
-            float measuredMeltingTemperature;
-            var canParseNominalMeltingTemperature = float.TryParse(NominalTemperatureTextBox.Text, out nominalMeltingTemperature);
-            var canParseMeasuredMeltingTemperature = float.TryParse(MeasuredTemperatureTextBox.Text, out measuredMeltingTemperature);
-            if (canParseNominalMeltingTemperature && canParseMeasuredMeltingTemperature) 
+            if (float.TryParse(NominalTemperatureTextBox.Text, out float nominalMeltingTemperature) && float.TryParse(MeasuredTemperatureTextBox.Text, out float measuredMeltingTemperature)) 
             {
                 if (isC)
                 {
@@ -184,11 +182,11 @@ namespace SubstanceMeltingTemps
 
         private void TextBoxNumberValidation(object sender, TextCompositionEventArgs e)
         {
-            e.Handled = numericOnly.IsMatch(e.Text);
+            e.Handled = NumericOnly().IsMatch(e.Text);
         }
         private void TextBoxNaturalNumberValidation(object sender, TextCompositionEventArgs e)
         {
-            e.Handled = !naturalNumbersOnly.IsMatch(e.Text);
+            e.Handled = !NaturalNumbersOnly().IsMatch(e.Text);
         }
 
         private void InstrumentsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
